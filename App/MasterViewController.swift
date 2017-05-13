@@ -159,7 +159,8 @@ class MasterViewController: UITableViewController {
 					switch error {
 					case OAuth2Error.requestCancelled:   break
 					case let e where NSURLErrorDomain == e._domain && NSURLErrorCancelled == e._code:   break
-					default:                             self.show(error: error, title: "Not Authorized")
+					default:
+                        self.show(error: error, title: "Not Authorized")
 					}
 					self.connectButtonTitle = nil
 				}

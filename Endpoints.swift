@@ -60,7 +60,33 @@ func configuredEndpoints() -> [Endpoint] {
 	smart.authProperties.granularity = .patientSelectNative
 	smart.authProperties.embedded = true
 	endpoints.append(Endpoint(client: smart, name: "SMART"))
+    
+//    let allscript = Client(
+//        
+//        baseURL: URL(string: "https://pro171.open.allscripts.com/authorization/login?signin=9ecb00d6dd9d9cefc8f83a407d68274a")!,
+//        settings: [
+//            "client_id": "D036C02E-79E5-4483-BE16-3C0DCA7A6049",
+//            "client_name": "SMART on FHIR iOS Sample App",
+//            "redirect": "smartapp://callback",
+//            "logo_uri": "https://avatars1.githubusercontent.com/u/7401080",
+//            ])
+//    smart.authProperties.granularity = .patientSelectNative
+//    smart.authProperties.embedded = true
+//    endpoints.append(Endpoint(client: allscript, name: "ALLSCRIPT"))
 
+    let allscript = Client(
+        
+        baseURL: URL(string: "https://tw171.open.allscripts.com/FHIR")!,
+        settings: [
+            "client_id": "641EBA6C-C852-4D27-A29E-FF3630107A29",
+            "client_name": "MMP",
+            "redirect": "smartapp://callback",
+            "logo_uri": "http://mastermobileproducts.com/wp-content/uploads/2015/01/MMPNewLogo15-231x70.png",
+            ])
+    smart.authProperties.granularity = .patientSelectNative
+    smart.authProperties.embedded = true
+    endpoints.append(Endpoint(client: allscript, name: "ALLSCRIPT"))
+    
 	return endpoints
 }
 

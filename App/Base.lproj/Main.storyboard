@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -140,14 +139,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="Eg3-Nk-sE7">
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="bookmarks" id="hiv-Dm-I1C">
-                                <connections>
-                                    <action selector="selectEndpoint:" destination="7bK-jq-Zjz" id="RmO-wv-GXR"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="AllScript" style="plain" id="Bpf-c5-xlc"/>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="hiv-Dm-I1C">
+                            <connections>
+                                <action selector="selectEndpoint:" destination="7bK-jq-Zjz" id="RmO-wv-GXR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
